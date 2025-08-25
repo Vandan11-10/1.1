@@ -3,39 +3,18 @@
 
 int main()
 {
-    float NetSalary,GrossSalary;
-    float allowances,deductions;
+    float netSalary,grossSalary;
+    float allowance,deduction;
 
     printf("Enter Gross Salary: ");
     scanf("%f", &GrossSalary);
 
-    printf("Enter Allowances: ");
-    scanf("%f", &allowances);
+    allowance = grossSalary * 0.1;
+   deduction = grossSalary * 0.03;
 
-    printf("Enter Deductions: ");
-    scanf("%f", &deductions);
+   netSalary = grossSalary + allowance - deduction;
 
-    if (GrossSalary>10000)
-    {
-        allowances = allowances / 10;
-        deductions = deductions / 3;
-
-        NetSalary = GrossSalary + allowances - deductions;
-    }
-
-     else if (GrossSalary>5000)
-     {
-        allowances = allowances / 7;
-        deductions = deductions / 2;
-
-        NetSalary = GrossSalary + allowances - deductions;
-     }
-
-      else
-      {
-        NetSalary = GrossSalary + allowances - deductions;
-     }
-
+        
        printf("Your Net Salary is: %f\n", NetSalary);
        return 0;
 }
